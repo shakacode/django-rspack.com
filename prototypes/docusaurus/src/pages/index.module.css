@@ -1,0 +1,344 @@
+.heroBanner {
+  background: var(--site-hero-background);
+  color: var(--ifm-color-content);
+  padding: 2.75rem 0 2.5rem;
+  border-bottom: 1px solid var(--site-border-color);
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.title {
+  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  max-width: 44rem;
+  font-size: clamp(1.02rem, 2vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--ifm-color-content-secondary);
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 2.4rem 0;
+}
+
+.sectionAlt {
+  background: var(--site-surface-1);
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--site-border-color);
+  border-bottom: 1px solid var(--site-border-color);
+}
+
+.heroBanner > .container > :first-child,
+.section > .container > :first-child,
+.sectionAlt > .container > :first-child,
+.stepCard > :first-child,
+.quoteCard > :first-child,
+.benefitCard > :first-child,
+.testimonialCard > :first-child {
+  margin-top: 0;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stepCard {
+  background: var(--site-surface-0);
+  border: 1px solid var(--site-border-color);
+  border-radius: 12px;
+  padding: 1.05rem;
+  box-shadow: var(--site-card-shadow);
+}
+
+.inlineCode {
+  display: inline-block;
+  margin: 0.2rem 0 0.75rem;
+  background: var(--site-surface-1);
+  border: 1px solid var(--site-border-color);
+  border-radius: 6px;
+  padding: 0.45rem 0.55rem;
+}
+
+.quoteGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.quoteCard {
+  margin: 0;
+  background: var(--site-surface-0);
+  border: 1px solid var(--site-border-color);
+  border-radius: 12px;
+  padding: 1rem 1rem 0.9rem;
+  box-shadow: var(--site-card-shadow);
+}
+
+.quoteCard footer {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.testimonialCard {
+  margin-top: 1.25rem;
+  background: var(--site-surface-0);
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--site-card-shadow);
+}
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.testimonialBrand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.testimonialLabel {
+  font-size: 0.72rem;
+  font-weight: 620;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-primary);
+  background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+}
+
+.testimonialQuote {
+  margin: 0 0 1.15rem;
+  border-left: none;
+  padding: 0;
+}
+
+.testimonialQuote p {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--ifm-color-content);
+  margin: 0;
+}
+
+.testimonialStats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.15rem;
+}
+
+.testimonialStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.statValue {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.testimonialAttribution {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.rspackHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.rspackLogo {
+  display: block;
+  width: 84px;
+  height: 84px;
+}
+
+.rspackKicker {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 620;
+  color: var(--ifm-color-primary);
+}
+
+.rspackHeader h2 {
+  margin: 0;
+}
+
+.rspackIntro {
+  max-width: 48rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.benefitCard {
+  background: var(--site-surface-0);
+  border: 1px solid var(--site-border-color);
+  border-radius: 12px;
+  padding: 1.05rem;
+  box-shadow: var(--site-card-shadow);
+}
+
+.benefitCard h3 {
+  margin-bottom: 0.35rem;
+}
+
+.benefitCard p {
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 0;
+}
+
+.expertHelpBanner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid var(--site-border-color);
+  border-radius: 12px;
+  background: var(--site-surface-1);
+  padding: 1.2rem;
+  box-shadow: var(--site-card-shadow);
+}
+
+.expertHelpContent {
+  max-width: 42rem;
+}
+
+.expertHelpKicker {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 620;
+  color: var(--ifm-color-primary);
+}
+
+.expertHelpContent h2 {
+  margin-bottom: 0.45rem;
+}
+
+.expertHelpContent p:last-child {
+  margin-bottom: 0;
+  color: var(--ifm-color-content-secondary);
+}
+
+.expertHelpActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 996px) {
+  .heroBanner {
+    padding: 2.25rem 0 2.1rem;
+  }
+
+  .stepGrid,
+  .quoteGrid,
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rspackHeader {
+    align-items: flex-start;
+  }
+
+  .rspackLogo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .expertHelpBanner {
+    grid-template-columns: 1fr;
+  }
+
+  .expertHelpActions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroBanner {
+    padding: 1.85rem 0 1.7rem;
+  }
+
+  .title {
+    font-size: clamp(1.9rem, 9vw, 2.35rem);
+  }
+
+  .buttons {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .stepCard,
+  .quoteCard,
+  .benefitCard,
+  .testimonialCard {
+    border-radius: 10px;
+  }
+
+  .testimonialCard {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .testimonialStats {
+    gap: 1.25rem;
+  }
+
+  .statValue {
+    font-size: 1.4rem;
+  }
+
+  .rspackHeader {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

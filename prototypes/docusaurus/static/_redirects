@@ -1,0 +1,3 @@
+/django-rspack/docs/* /docs/:splat 301
+/django-rspack/docs /docs 301
+/docs/README /docs 301

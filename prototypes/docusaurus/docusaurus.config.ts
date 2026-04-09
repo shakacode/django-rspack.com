@@ -1,0 +1,178 @@
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import {GlobExcludeDefault} from '@docusaurus/utils';
+import {accessibleGithubLight, accessibleVsDark} from './src/prismThemes';
+
+const config: Config = {
+  title: 'django-rspack',
+  tagline: 'Django integration for Rspack with shared Shakapacker tooling.',
+  favicon: 'img/favicon.ico',
+
+  future: {
+    v4: true,
+  },
+
+  url: 'https://django-rspack.com',
+  baseUrl: '/',
+
+  organizationName: 'shakacode',
+  projectName: 'django-rspack.com',
+
+  onBrokenLinks: 'warn',
+  markdown: {
+    format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchBarShortcutHint: true,
+      },
+    ],
+  ],
+
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
+          exclude: [...GlobExcludeDefault, '**/planning/**'],
+          editUrl: ({docPath}) => {
+            if (docPath === 'README.md') {
+              return undefined;
+            }
+            const root = 'https://github.com/shakacode/django-rspack/tree/main/docs/';
+            return `${root}${docPath}`;
+          },
+        },
+        blog: false,
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
+    announcementBar: {
+      id: 'consultation_cta',
+      content:
+        'Need help integrating Rspack into a Django app? <a href="https://meetings.hubspot.com/justingordon/30-minute-consultation">Book a complimentary 30-minute assessment</a> with the ShakaCode team.',
+      isCloseable: true,
+    },
+    navbar: {
+      title: 'django-rspack',
+      logo: {
+        alt: 'django-rspack Logo',
+        src: 'img/logo-mark.png',
+        width: 40,
+        height: 40,
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Docs',
+        },
+        {to: '/examples', label: 'Resources', position: 'left'},
+        {to: '/pro', label: 'Support', position: 'left'},
+        {
+          href: 'https://www.shakacode.com/contact/',
+          label: 'Get Expert Help',
+          position: 'right',
+          className: 'navbar-cta',
+        },
+        {
+          href: 'https://github.com/shakacode/django-rspack',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/sponsors/shakacode',
+          label: 'Sponsor',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'light',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {label: 'Documentation Guide', to: '/docs'},
+            {label: 'Getting Started', to: '/docs/getting-started'},
+            {label: 'Configuration', to: '/docs/configuration'},
+            {label: 'Deployment', to: '/docs/deployment'},
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Repository',
+              href: 'https://github.com/shakacode/django-rspack',
+            },
+            {
+              label: 'Issues',
+              href: 'https://github.com/shakacode/django-rspack/issues',
+            },
+            {
+              label: 'ShakaCode',
+              href: 'https://www.shakacode.com',
+            },
+            {
+              label: 'Book a Complimentary Assessment',
+              href: 'https://meetings.hubspot.com/justingordon/30-minute-consultation',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Support',
+              to: '/pro',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/shakacode/django-rspack',
+            },
+            {
+              label: 'Sponsor',
+              href: 'https://github.com/sponsors/shakacode',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} ShakaCode. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: accessibleGithubLight,
+      darkTheme: accessibleVsDark,
+      additionalLanguages: ['ruby', 'markup-templating', 'erb', 'diff', 'haml', 'bash', 'regex', 'ignore'],
+    },
+  } satisfies Preset.ThemeConfig,
+};
+
+export default config;
